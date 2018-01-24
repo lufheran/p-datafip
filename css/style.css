@@ -1,0 +1,540 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300 !important;
+    color: #333333;
+    line-height: 1.2;
+    font-size: 17px;
+}
+
+a:active, a:hover {
+    outline: 0;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 300 !important;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+header {
+    background: #084a87;
+    position: fixed;
+    top: 0;
+    padding: 10px 0;
+    height: 66px;
+    width: 100%;
+    z-index: 6;
+}
+
+#logo {
+    vertical-align: middle;
+}
+
+#logo img.logo {
+    width: 80px;
+    height: auto;
+}
+
+#logo img.logomenu {
+    width: auto;
+    height: 25px;
+    margin-left: 20px;
+}
+
+#menu {
+    color: #ffffff;
+    vertical-align: middle;
+}
+
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+section#head {
+    height: 100vh;
+    width: 100%;
+}
+
+.head-parallax { 
+/*  background-image: url("../img/head.jpg"); */
+    height: 100vh; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-parallax { 
+    background-image: url("../img/main.jpg");
+    height: auto; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#bg-logo {
+    height: 100vh;
+}
+
+.logomenu {
+    display: none;
+}
+
+#romb-contenedor {
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+}
+
+#romb-contenedor .rombo {
+    background-color: rgba(8, 74, 135, 0.96);
+    padding:0;
+    width:500px;
+    height:500px;
+    margin:auto;
+    display:block;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform:rotate(45deg) scale(1) translateX(0);
+    transition: transform  0.1s cubic-bezier(0, 1.8, 1, 1.8);
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.rombo:hover {
+    transform:rotate(45deg) scale(1.1) translateX(-0.5px);
+    box-shadow: 10px 10px 50px rgba(0, 38, 95, 0.12) inset, -10px -10px 50px rgba(2, 51, 125, 0.19) inset;
+    border: 30px solid #2577c7;
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.logo-content:hover ~ #romb-contenedor .rombo {
+    transform:rotate(45deg) scale(1.1) translateX(-0.5px);
+    box-shadow: 10px 10px 50px rgba(0, 38, 95, 0.12) inset, -10px -10px 50px rgba(2, 51, 125, 0.19) inset;
+    border: 30px solid #2577c7;
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.intro {
+    font-weight: 200 !important;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+#main {
+    padding: 100px 0 40px;
+}
+
+.logo-content {
+    width: 40%;
+    max-width: 520px;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+    z-index: 3;
+}
+
+#logo-datafip img {
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 350px;
+}
+
+.vcenter {
+    display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	align-items: center;
+    justify-content: center;
+}
+
+.icon-scroll,
+.icon-scroll:before {
+  position: absolute;
+  left: 50%;
+}
+
+.icon-scroll {
+  width: 30px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: -15px;
+  -webkit-box-shadow: inset 0 0 0 3px #fff;
+  box-shadow: inset 0 0 0 3px #fff;
+  border-radius: 25px;
+}
+
+.icon-scroll a {
+    position: absolute;
+    height: 50px;
+    width: 30px;
+    margin-left: -15px;
+    text-indent: -9999px;
+}
+
+.icon-scroll:before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  margin-left: -3px;
+  top: 6px;
+  border-radius: 3px;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+  animation-name: scroll;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
+
+#redes {
+    text-align: right;
+    vertical-align: middle;
+}
+
+.soc {
+  width: 100%;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 10px 8px;
+  text-align: right;
+}
+
+.soc li {
+  display: inline-block;
+  margin: 0 12px;
+}
+
+.soc a, .soc svg {
+  display: block;
+}
+
+.soc a {
+  position: relative;
+  height: 25px;
+  width: 25px;
+}
+
+.soc svg {
+  height: 100%;
+  width: 100%;
+}
+
+.soc em {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: -.75em;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#redes .icon {
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+#redes .icon:hover {
+  background: #FAA632;
+  border-radius: 100%;
+  color: #002D8C;
+  fill: #002D8C;
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-transition: background-color .5s, -webkit-transform .5s ease-out;
+  transition: background-color .5s, -webkit-transform .5s ease-out;
+  transition: background-color .5s, transform .5s ease-out;
+  transition: background-color .5s, transform .5s ease-out, -webkit-transform .5s ease-out;
+}
+
+.hoverscale figure {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    margin: 0;
+    padding: 0;
+    background: #002D8C;
+    overflow: hidden;
+    position: relative;
+}
+
+.hoverscale figure button {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300 !important;
+    background-color: #002D8C;
+    position: absolute;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    opacity: 1;
+    width: 200px;
+    height: 50px;
+    top:80%;
+    margin-top: -25px;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    cursor: pointer;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.hoverscale a {
+    color: #002D8C;
+}
+
+.hoverscale a:hover {
+    text-decoration: none;
+}
+
+.hoverscale a:hover > figure button {
+    top:50%;
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.hoverscale figure img {
+    max-width: 540px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.hoverscale a:hover > figure img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    opacity: 0.8;
+}
+
+.hoverscale h2 {
+    padding: 20px 20px 10px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 25px;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.hoverscale p {
+    padding: 0 20px 20px;
+    margin-top: 0;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.hoverscale a:hover > h2, .hoverscale a:hover > p {
+    color: #002D8C;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.hoverscale a section {
+    background: #ffffff;
+    min-height: 205px;
+}
+
+.has-padding {
+    padding: 70px 0;
+}
+
+.footer-bg {
+    background-color: #f4f4f4;
+}
+
+footer .footer-branding {
+    margin-bottom: 40px;
+}
+
+#otro-espe h2 {
+    color: #004589;
+}
+
+#otro-espe .enlaces-footer li {
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 7px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.15);
+    padding-bottom: 7px;
+}
+
+#otro-espe .enlaces-footer {
+    margin-bottom: 40px;
+}
+
+.enlaces-footer {
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px dotted rgba(255, 255, 255, 0.50);
+}
+
+footer .footer-nav {
+    padding-top: 40px;
+    border-top: solid 1px #9E9E9E;
+}
+
+footer .footer-nav ul.footer-primary-nav {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+footer .footer-nav ul.footer-primary-nav li {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+footer a {
+    color: #004589!important;
+}
+
+footer .footer-nav ul.footer-share {
+    display: inline-block;
+    float: right;
+}
+
+footer .footer-nav ul.footer-share>li:last-child {
+    margin-right: 0;
+}
+
+footer .footer-nav ul.footer-share>li {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.share-dropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+    opacity: 0;
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 rgba(50,57,74,0.31);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+footer .footer-branding .footer-branding-logo {
+    margin-bottom: 10px;
+}
+
+footer .icon-Layers:before {
+    content: '\e6b9';
+}
+
+#otro-espe .documento:after {
+    content: " ";
+    -ms-transform: rotate(7deg);
+    -webkit-transform: rotate(15deg);
+    transform: rotate(35deg);
+    border-right: 1px solid #0e4f8f;
+    height: 42px;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -20px;
+}
+
+footer .icon {
+    font-family: 'Stroke-Gap-Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+footer i {
+    margin-right: 10px;
+}
+
+@media (max-width: 576px) {
+    #romb-contenedor .rombo {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .logo-content {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-parallax {
+        height: auto;
+    }
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 1200px) {
+}
