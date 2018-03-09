@@ -14,9 +14,32 @@
     <script type="text/javascript" src="js/fusioncharts.js"></script>
     <script type="text/javascript" src="js/fusioncharts.charts.js"></script>
     <script type="text/javascript" src="js/fusioncharts.theme.fint.js"></script>
-    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
-   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
-   crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <script type="text/javascript" src="js/mapa1/cauca.js"></script>
+    <script type="text/javascript" src="js/mapa1/arauca.js"></script>
+    <script type="text/javascript" src="js/mapa1/bajocaucaynordesteantioqueno.js"></script>
+    <script type="text/javascript" src="js/mapa1/catatumbo.js"></script>
+    <script type="text/javascript" src="js/mapa1/choco.js"></script>
+    <script type="text/javascript" src="js/mapa1/cuencadelcagunypiedemontecaqueteo.js"></script>
+    <script type="text/javascript" src="js/mapa1/macarenaguaviare.js"></script>
+    <script type="text/javascript" src="js/mapa1/montesdemaria.js"></script>
+    <script type="text/javascript" src="js/mapa1/sierranevadaperij.js"></script>
+    <script type="text/javascript" src="js/mapa1/surdebolivar.js"></script>
+    <script type="text/javascript" src="js/mapa1/pacficomedio.js"></script>
+    <script type="text/javascript" src="js/mapa1/pacficoyfronteranariense.js"></script>
+    <script type="text/javascript" src="js/mapa1/putumayo.js"></script>
+    <script type="text/javascript" src="js/mapa1/surdecordoba.js"></script>
+    <script type="text/javascript" src="js/mapa1/surdeltolima.js"></script>
+    <script type="text/javascript" src="js/mapa1/urabantioqueo.js"></script>
+    <script type="text/javascript" src="js/mapa2/asambleassus.js"></script>
+    <script type="text/javascript" src="js/mapa2/audienciaspu.js"></script>
+    <script type="text/javascript" src="js/mapa2/cdmr.js"></script>
+    <script type="text/javascript" src="js/mapa2/ctjt.js"></script>
+    <script type="text/javascript" src="js/mapa2/ctjtarri.js"></script>
+    <script type="text/javascript" src="js/mapa2/ctpaz.js"></script>
+    <script type="text/javascript" src="js/mapa2/mic.js"></script>
+    <script type="text/javascript" src="js/mapa2/piscc.js"></script>
+    <script type="text/javascript" src="js/mapa2/rcuentas.js"></script>
     <script>
         $(document).ready(function(){
           $('a[href^="#"]').click(function(){
@@ -472,7 +495,14 @@
             <div class="titulo">son afro</div>
         </div>
         <div class="diagonalr" class="wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.1s"></div>
-        <div id="mapa1"></div>
+        <div class="primer-mapa">
+    <h1 class="title-map">Los PDET y <br>las regiones</h1>
+    <div id="controles"></div>
+    <div class="triangulo_top_right"></div>
+    <div id = 'map' class="mascara">
+       
+    </div>
+    </div>
     </div>
     
     <div id="esp2">
@@ -738,6 +768,6 @@ El contenido de <a href="http://www.ideaspaz.org/">www.ideaspaz.org</a> puede se
 			</div>
 		</div>
 	</footer>
-
+<script src="js/main.js"></script>
 </body>
 </html>
